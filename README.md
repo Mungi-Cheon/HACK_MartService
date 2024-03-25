@@ -23,7 +23,6 @@
 - 버전 관리 : Github
 - 협업 툴 : Notion, Slack
 - [코드 컨벤션](https://www.notion.so/a679d2872cef45ab889763c46b3e4832)
-- [깃 컨벤션](https://www.notion.so/f4b2261ff31041bc8e901959ef830273)
 - [커밋 컨벤션](https://www.notion.so/aed0e405bc384cb3b4a78b8e375e34d2)
 
 ## 2.브랜치 전략
