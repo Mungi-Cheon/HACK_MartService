@@ -31,6 +31,8 @@ public class Cashier implements Calculatable {
         Map<String, Product> map = cart.getProducts();
         ArrayList<Row> rows = new ArrayList<>();
 
+        System.out.println("상품명         단가     수량    금액");
+        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         for (Map.Entry<String, Product> product : map.entrySet()) {
             //TODO: 밑의 꺼 한줄로 구현 가능 stream 람다로. row를 어떻게 녹일지 고려할 것.
             String unitName = product.getValue().getName();
@@ -39,6 +41,7 @@ public class Cashier implements Calculatable {
             int unitTotal = unitPrice * unitQuantity;
             //TODO 여기까지^
             totalPrice += unitTotal;
+
             System.out.printf("%-10s %5d %5d %6d\n", unitName, unitPrice, unitQuantity,
                 unitTotal);
 
