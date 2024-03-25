@@ -18,7 +18,7 @@ public class Receipt implements Printable {
 
     @Override
     public void printReceipt() {
-        ArrayList<ProductRow> rows = bill.getRows();
+        ArrayList<ProductRow> rows = bill.getProductRows();
         PaymentMethod paymentMethod = paymentDetail.getPaymentMethod();
         int paidAmount = paymentDetail.getPaymentMethod().balance;
         int totalPrice = 0;

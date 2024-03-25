@@ -10,7 +10,7 @@ public class Bill {
         this.productRows = productRows;
     }
 
-    public ArrayList<ProductRow> getRows() {
+    public ArrayList<ProductRow> getProductRows() {
         return productRows;
     }
 }

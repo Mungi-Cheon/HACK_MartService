@@ -32,7 +32,7 @@ public class Cashier implements Calculatable {
         ArrayList<ProductRow> productRows = new ArrayList<>();
 
         System.out.printf("%-8s %5s %5s %5s\n", "상품명", "단가", "수량", "금액");
-        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         for (Map.Entry<String, Product> product : map.entrySet()) {
             //TODO: 밑의 꺼 한줄로 구현 가능 stream 람다로. row를 어떻게 녹일지 고려할 것.
             String unitName = product.getValue().getName();
@@ -49,7 +49,7 @@ public class Cashier implements Calculatable {
             productRows.add(productRow);
         }
 
-        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         System.out.printf("%-25s %d\n", "합 계", totalPrice);
         System.out.println();
 
