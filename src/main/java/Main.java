@@ -29,7 +29,7 @@ public class Main {
         Cashier cashier = new Cashier(new Kiosk());
         Bill bill = cashier.generateBill(myCart);
         Person songa = new Person("송아");
-        Money money = new Money(10000);
+        Money money = new Money(20000);
         Customer customer = new Customer(songa, money, myCart);
         Receipt receipt = customer.pay(bill);
         receipt.printReceipt();

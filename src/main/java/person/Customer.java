@@ -4,8 +4,8 @@ import paymentMethod.PaymentMethod;
 import product.Product;
 import thing.Bill;
 import thing.Cart;
-import thing.Receipt;
 import thing.PaymentDetail;
+import thing.Receipt;
 
 public class Customer {
 
@@ -23,13 +23,10 @@ public class Customer {
         cart.add(product, quantity);
     }
 
-    public Receipt pay(Bill bill) { //customer의 페이
-
-        int paid = this.paymentMethod.balance;
-
+    public Receipt pay(Bill bill) {
         //TODO: 예외처리, 에러처리
 
-        PaymentDetail paymentDetail = new PaymentDetail(paid, paymentMethod);
+        PaymentDetail paymentDetail = new PaymentDetail(paymentMethod);
         return new Receipt(bill, paymentDetail);
     }
 }
