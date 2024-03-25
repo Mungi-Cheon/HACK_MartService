@@ -32,19 +32,19 @@ public class Customer {
     //TODO: 문기+문영+태민
     //TODO: 미완성
     //TODO: 리턴타입 Receipt로 나중에 변경
-    public void pay(Bill bill) { //customer의 페이
-
-        ArrayList<Row> rows = bill.getRows();
-        int totalPrice = 0;
-        for (Row row : rows) {
-            totalPrice += row.getUnitTotal();
-        }
-        int paid = 0; //내가낸돈
-        int change = paid - totalPrice;
-        if (change < 0) {
-            System.out.println("잔액이 부족합니다");
-            ;
-        }
+//    public void pay(Bill bill) { //customer의 페이
+//
+//        ArrayList<Row> rows = bill.getRows();
+//        int totalPrice = 0;
+//        for (Row row : rows) {
+//            totalPrice += row.getUnitTotal();
+//        }
+//        int paid = 0; //내가낸돈
+//        int change = paid - totalPrice;
+//        if (change < 0) {
+//            System.out.println("잔액이 부족합니다");
+//            ;
+//        }
 //        Receipt receipt = paymentMethod.transact("뭔가넘겨야됌");
 
         //예외처리, 에러처리
