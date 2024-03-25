@@ -5,7 +5,7 @@ import java.util.Map;
 import product.Product;
 import thing.Bill;
 import thing.Cart;
-import thing.Row;
+import thing.ProductRow;
 
 public class Cashier implements Calculatable {
 
@@ -29,7 +29,7 @@ public class Cashier implements Calculatable {
     public Bill generateBill(Cart cart) {
         totalPrice = 0;
         Map<String, Product> map = cart.getProducts();
-        ArrayList<Row> rows = new ArrayList<>();
+        ArrayList<ProductRow> productRows = new ArrayList<>();
 
         System.out.printf("%-8s %5s %5s %5s\n", "상품명", "단가", "수량", "금액");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
@@ -45,14 +45,15 @@ public class Cashier implements Calculatable {
             System.out.printf("%-10s %5d %5d %6d\n", unitName, unitPrice, unitQuantity,
                 unitTotal);
 
-            Row row = new Row(unitName, unitPrice, unitQuantity, unitTotal);
-            rows.add(row);
+            ProductRow productRow = new ProductRow(unitName, unitPrice, unitQuantity, unitTotal);
+            productRows.add(productRow);
         }
 
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         System.out.printf("%-25s %d\n", "합 계", totalPrice);
+        System.out.println();
 
-        return new Bill(rows);
+        return new Bill(productRows);
     }
 
 }
