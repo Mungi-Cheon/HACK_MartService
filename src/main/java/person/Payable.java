@@ -1,8 +1,9 @@
 package person;
 
+import thing.Bill;
 import thing.Receipt;
 
 public interface Payable {
 
-    public abstract Receipt pay();
+    Receipt pay(Bill bill);
 }

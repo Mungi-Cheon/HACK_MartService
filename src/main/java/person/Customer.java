@@ -1,13 +1,15 @@
 package person;
 
+import java.util.ArrayList;
 import paymentMethod.PaymentMethod;
 import product.Product;
 import thing.Bill;
 import thing.Cart;
 import thing.PaymentDetail;
+import thing.ProductRow;
 import thing.Receipt;
 
-public class Customer {
+public class Customer implements Payable {
 
     private Person person;
     private PaymentMethod paymentMethod;
@@ -23,10 +25,10 @@ public class Customer {
         cart.add(product, quantity);
     }
 
+    @Override
     public Receipt pay(Bill bill) {
-        //TODO: 예외처리, 에러처리
-
+        ArrayList<ProductRow> productRows = bill.getProductRows();
         PaymentDetail paymentDetail = new PaymentDetail(paymentMethod);
-        return new Receipt(bill, paymentDetail);
+        return new Receipt(productRows, paymentDetail);
     }
 }
