@@ -29,14 +29,4 @@ public class ProductRow {
     public int getUnitTotal() {
         return unitTotal;
     }
-
-    @Override
-    public String toString() {
-        return "Row{" +
-            "unitName='" + unitName + '\'' +
-            ", unitPrice=" + unitPrice +
-            ", unitQuantity=" + unitQuantity +
-            ", unitTotal=" + unitTotal +
-            '}';
-    }
 }
