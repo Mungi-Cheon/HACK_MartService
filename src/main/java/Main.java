@@ -1,7 +1,6 @@
 import paymentMethod.Money;
 import person.Cashier;
 import person.Customer;
-import person.Kiosk;
 import person.MarketWorker;
 import person.Person;
 import product.Egg;
@@ -32,9 +31,10 @@ public class Main {
         customer.putInCart(seoulMilk, 1);
         customer.putInCart(maeilMilk, 2);
         customer.putInCart(organicEgg, 1);
-        //        Cashier cashier = new Cashier(new Person("박경태"));
+        Cashier cashier = new Cashier(new Person("박경태"));
+//        Cashier cashier = new Cashier(new Kiosk("Siri"));
+//        Cashier cashier = new Cashier(new Kiosk("빅스비"));
         cart.view();
-        Cashier cashier = new Cashier(new Kiosk());
         Bill bill = cashier.generateBill(cart);
         Receipt receipt = customer.pay(bill);
         receipt.printReceipt();
