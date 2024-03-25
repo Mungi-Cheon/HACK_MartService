@@ -86,28 +86,28 @@
 - 세세한 관리에 대해선 서로 소통을 하고 해결이 어려운 점은 그룹장 주도로 정리 및 솔루션 제공을 했습니다.
 
 ## 5.주요 기능 및 구현 내용
+
 - 마트 근무자는 상품을 진열합니다.
-<br><br>
-<img src="https://github.com/Mungi-Cheon/HACK_MartService/assets/159132478/dc893e11-5990-43d9-a151-c1f31612fe1a">
-<br>
+  <img src="https://github.com/Mungi-Cheon/HACK_MartService/assets/159132478/dc893e11-5990-43d9-a151-c1f31612fe1a">
+  <br><br>
+
 - 구매자는 카트에 상품을 담습니다.
-<br><br>
-<img src="https://github.com/Mungi-Cheon/HACK_MartService/assets/159132478/d77e8abc-7820-40ea-84e3-d8cfc5fd95b4">
-<br>
-- 계산원은 사람과 키오스크로 대체 될 수 있습니다.
-<br><br>
-<img src="https://github.com/Mungi-Cheon/HACK_MartService/assets/159132478/d29437b7-1dbb-4f7c-848e-1e78014a582e">
-<img src="https://github.com/Mungi-Cheon/HACK_MartService/assets/159132478/7566d494-9560-492a-8e5b-0f18097c52c2">
-<br>
+  <img src="https://github.com/Mungi-Cheon/HACK_MartService/assets/159132478/d77e8abc-7820-40ea-84e3-d8cfc5fd95b4">
+  <br><br>
+
+- 계산원은 사람과 키오스크로 대체 될 수 있습니다
+  <img src="https://github.com/Mungi-Cheon/HACK_MartService/assets/159132478/d29437b7-1dbb-4f7c-848e-1e78014a582e">
+  <img src="https://github.com/Mungi-Cheon/HACK_MartService/assets/159132478/7566d494-9560-492a-8e5b-0f18097c52c2">
+  <br><br>
+
 - 계산원은 계산서를 출력합니다.
-<br><br>
-<img src="https://github.com/Mungi-Cheon/HACK_MartService/assets/159132478/a278ea90-d092-4499-8cdb-a689e1f8133c">
-<br>
+  <img src="https://github.com/Mungi-Cheon/HACK_MartService/assets/159132478/a278ea90-d092-4499-8cdb-a689e1f8133c">
+  <br><br>
+
 - 결제는 현금 또는 카드를 사용할 수 있고, 결제 후에는 영수증이 출력됩니다.
-<br><br>
-<img src="https://github.com/Mungi-Cheon/HACK_MartService/assets/159132478/77a9811d-3316-4659-85af-c4357f0d6201">
-<img src="https://github.com/Mungi-Cheon/HACK_MartService/assets/159132478/ebf30f9a-4303-43a4-98ac-08f267ed0c43">
-<br>
+  <img src="https://github.com/Mungi-Cheon/HACK_MartService/assets/159132478/77a9811d-3316-4659-85af-c4357f0d6201">
+  <img src="https://github.com/Mungi-Cheon/HACK_MartService/assets/159132478/ebf30f9a-4303-43a4-98ac-08f267ed0c43">
+  <br><br>
 
 ## 6. KPT
 
