@@ -1,6 +1,5 @@
 package thing;
 
-
 import java.util.ArrayList;
 import paymentMethod.Card;
 import paymentMethod.Money;

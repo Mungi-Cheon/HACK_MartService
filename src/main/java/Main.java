@@ -1,6 +1,7 @@
 import paymentMethod.Money;
 import person.Cashier;
 import person.Customer;
+import person.Kiosk;
 import person.MarketWorker;
 import person.Person;
 import product.Egg;
@@ -17,11 +18,13 @@ public class Main {
         Product maeilMilk = new Milk("매일우유", 1100);
         Product organicEgg = new Egg("유기농 계란", 8000);
         Person songa = new Person("송아");
+        Person hoon = new Person("정훈");
+        Person tae = new Person("경태");
         Money money = new Money(20000);
         Cart cart = new Cart();
         Customer customer = new Customer(songa, money, cart);
 
-        MarketWorker marketWorker = new MarketWorker();
+        MarketWorker marketWorker = new MarketWorker(hoon); //TODO. MarketWorker는 Person을 변수로 받아야함.
         marketWorker.addProductToDisplay(seoulMilk);
         marketWorker.addProductToDisplay(maeilMilk);
         marketWorker.addProductToDisplay(organicEgg);
@@ -31,7 +34,7 @@ public class Main {
         customer.putInCart(seoulMilk, 1);
         customer.putInCart(maeilMilk, 2);
         customer.putInCart(organicEgg, 1);
-        Cashier cashier = new Cashier(new Person("박경태"));
+        Cashier cashier = new Cashier(tae);
 //        Cashier cashier = new Cashier(new Kiosk("Siri"));
 //        Cashier cashier = new Cashier(new Kiosk("빅스비"));
         cart.view();

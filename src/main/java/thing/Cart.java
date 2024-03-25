@@ -34,7 +34,8 @@ public class Cart {
     }
 
     public void view() {
-        System.out.println("👜 카트 안의 모든 상품은 다음과 같습니다.");
+        System.out.println("👜 카트 안의 모든 상품 목록입니다.");
+        System.out.println();
         for (Map.Entry<String, Product> prod : map.entrySet()) {
             System.out.printf("• %s: %d개\n", prod.getKey(), prod.getValue().getQuantity());
         }
