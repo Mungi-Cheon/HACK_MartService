@@ -1,18 +1,15 @@
 package paymentMethod;
 
-import thing.Receipt;
-
 public abstract class PaymentMethod {
 
-    public int price;
+    public int balance;
 
-    public PaymentMethod() { //카드
-
+    public PaymentMethod() {
+        System.out.println("💳 카드로 결제합니다.");
     }
 
-    public PaymentMethod(int price) { //현금
-        this.price = price;
+    public PaymentMethod(int balance) {
+        this.balance = balance;
+        System.out.println("💰 현금으로 결제합니다.");
     }
-
-    public abstract Receipt transact();
 }

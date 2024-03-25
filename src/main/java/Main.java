@@ -1,10 +1,14 @@
+import paymentMethod.Money;
 import person.Cashier;
 import person.Customer;
 import person.Kiosk;
 import person.Person;
-import product.*;
+import product.Egg;
+import product.Milk;
+import product.Product;
 import thing.Bill;
 import thing.Cart;
+import thing.Receipt;
 
 public class Main {
 
@@ -21,12 +25,14 @@ public class Main {
         System.out.println();
         myCart.view();
 
-//  Cashier cashier = new Cashier(new Person("박경태"));
+//        Cashier cashier = new Cashier(new Person("박경태"));
         Cashier cashier = new Cashier(new Kiosk());
         Bill bill = cashier.generateBill(myCart);
-        Person moon = new Person("문영");
-        Customer customer = new Customer(moon, myCart);
-//        customer.pay(bill);
+        Person songa = new Person("송아");
+        Money money = new Money(10000);
+        Customer customer = new Customer(songa, money, myCart);
+        Receipt receipt = customer.pay(bill);
+        receipt.printReceipt();
 
     }
 }
