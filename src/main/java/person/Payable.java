@@ -4,5 +4,5 @@ import thing.Receipt;
 
 public interface Payable {
 
-  public abstract Receipt pay();
+    public abstract Receipt pay();
 }

@@ -5,8 +5,5 @@ import thing.Cart;
 
 public interface Calculatable {
 
-  int getTotalPrice(Cart cart);
-
-  Bill generateBill(Cart cart);
-//    void generateBill(Cart cart);
+    Bill generateBill(Cart cart);
 }

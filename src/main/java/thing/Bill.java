@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class Bill {
 
-  private ArrayList<Row> rows;
+    private ArrayList<Row> rows;
 
-  public Bill(ArrayList<Row> rows) {
-    this.rows = rows;
-  }
+    public Bill(ArrayList<Row> rows) {
+        this.rows = rows;
+    }
 
-  public ArrayList<Row> getRows() {
-    return rows;
-  }
+    public ArrayList<Row> getRows() {
+        return rows;
+    }
 }
 

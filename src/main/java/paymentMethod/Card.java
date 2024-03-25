@@ -11,7 +11,8 @@ public class Card extends PaymentMethod {
   @Override
   public Receipt transact() {
 
-    //잔돈 0원
+    //승인: 잔돈 0원
+    //거절: 한도 초과
     return null;
   }
 
