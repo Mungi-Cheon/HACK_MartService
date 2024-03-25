@@ -28,13 +28,13 @@
 
 ## 2.브랜치 전략
 
-- 깃에 익숙하지 않은 멤버들이 있어 Github Flow와 Git Flow 전략을 동시에 운용했습니다.
+- 깃에 익숙하지 않은 멤버들이 있어 `Github Flow`와 `Git Flow` 전략을 동시에 운용했습니다.
 - Git Flow 전략이 편한 멤버의 경우 main, MartService 브랜치와 feature 보조 브랜치를 운용했습니다.
   - main 브랜치는 배포 단계에서만 사용합니다
   - MartService 브랜치는 develop 브랜치와 동일하게 개발 단계에서 사용하는 브랜치입니다.
-  - feature 브랜치는 기능 단위로 사용하고 merge후 브랜치를 삭제합니다.
-- Github Flow 전략이 편한 멤버읙 경우 main, MartService 브랜치를 운용했습니다.
-- 코드 충돌이 빈번하게 발생할 가능성이 높으므로 Github Flow 전략을 이용하는 멤버에게는 작업 전, commit하기 전 push하기 전 3번에 나눠 코드를 항상 최신화할 수 있도록 했습니다.
+  - feature 브랜치는 기능 단위로 사용하고 merge 후 브랜치를 삭제합니다.
+- Github Flow 전략이 편한 멤버의 경우 main, MartService 브랜치를 운용했습니다.
+- 코드 충돌이 빈번하게 발생할 가능성이 높으므로 Github Flow 전략을 이용하는 멤버에게는 각 작업 단계 시작 전에 코드를 항상 최신화할 수 있도록 했습니다.
 
 ## 3. 역할 분담
 
