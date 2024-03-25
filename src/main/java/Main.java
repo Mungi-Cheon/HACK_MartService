@@ -24,7 +24,7 @@ public class Main {
         Cart cart = new Cart();
         Customer customer = new Customer(songa, money, cart);
 
-        MarketWorker marketWorker = new MarketWorker(hoon); //TODO. MarketWorker는 Person을 변수로 받아야함.
+        MarketWorker marketWorker = new MarketWorker(hoon);
         marketWorker.addProductToDisplay(seoulMilk);
         marketWorker.addProductToDisplay(maeilMilk);
         marketWorker.addProductToDisplay(organicEgg);
