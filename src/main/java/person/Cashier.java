@@ -21,7 +21,7 @@ public class Cashier implements Calculatable {
 
     public Cashier(Kiosk kiosk) {
         this.kiosk = kiosk; //받아주기만 함.
-        System.out.println("🤖 키오스크에서 계산을 도와드리겠습니다.");
+        System.out.println("🤖 " + kiosk.getModel() + "에서 계산을 도와드리겠습니다.");
         System.out.println();
     }
 

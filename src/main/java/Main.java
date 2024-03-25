@@ -34,6 +34,8 @@ public class Main {
 
 //        Cashier cashier = new Cashier(new Person("박경태"));
         Cashier cashier = new Cashier(new Kiosk());
+//        Cashier cashier = new Cashier(new Kiosk("Siri"));
+//        Cashier cashier = new Cashier(new Kiosk("빅스비"));
         Bill bill = cashier.generateBill(myCart);
         Person songa = new Person("송아");
         Money money = new Money(20000);
