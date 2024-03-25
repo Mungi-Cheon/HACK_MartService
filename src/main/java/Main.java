@@ -26,7 +26,7 @@ public class Main {
         Bill bill = cashier.generateBill(myCart);
         Person moon = new Person("문영");
         Customer customer = new Customer(moon, myCart);
-        customer.pay(bill);
+//        customer.pay(bill);
 
     }
 }
