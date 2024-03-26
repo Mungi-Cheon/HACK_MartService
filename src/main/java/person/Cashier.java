@@ -3,9 +3,9 @@ package person;
 import java.util.ArrayList;
 import java.util.Map;
 import product.Product;
-import thing.Bill;
-import thing.Cart;
-import thing.ProductRow;
+import service.Bill;
+import service.Cart;
+import service.obj.ProductRow;
 
 public class Cashier implements Calculatable {
 
@@ -15,13 +15,13 @@ public class Cashier implements Calculatable {
     private Calculatable calculatable;
 
     public Cashier(Person person) {
-        System.out.printf("🙍‍ 안녕하세요. 계산원 %s입니다.\n", person.getName());
+        System.out.printf("\n🙍‍ 안녕하세요. 계산원 %s입니다.", person.getName());
         System.out.println();
     }
 
     public Cashier(Kiosk kiosk) {
         this.kiosk = kiosk;
-        System.out.println("🤖 " + kiosk.getModel() + "에서 계산을 도와드리겠습니다.");
+        System.out.println("\n🤖 " + kiosk.getModel() + "에서 계산을 도와드리겠습니다.");
         System.out.println();
     }
 
@@ -32,6 +32,8 @@ public class Cashier implements Calculatable {
         Map<String, Product> map = cart.getProducts();
         ArrayList<ProductRow> productRows = new ArrayList<>();
 
+        System.out.println("✍️ 결제하실 내역입니다.");
+        System.out.println();
         System.out.printf("%-8s %5s %5s %5s\n", "상품명", "단가", "수량", "금액");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
 

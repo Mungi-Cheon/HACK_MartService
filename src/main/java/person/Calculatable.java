@@ -1,7 +1,7 @@
 package person;
 
-import thing.Bill;
-import thing.Cart;
+import service.Bill;
+import service.Cart;
 
 public interface Calculatable {
 

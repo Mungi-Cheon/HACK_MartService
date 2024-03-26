@@ -1,6 +1,7 @@
-package thing;
+package service;
 
 import java.util.ArrayList;
+import service.obj.ProductRow;
 
 public class Bill {
 

@@ -17,12 +17,13 @@ public class MarketWorker {
         System.out.println();
     }
 
+    public void addProduct2Shelf(ArrayList<Product> products) {
+        products.forEach(this::addProduct2Shelf);
+    }
+
     public void addProduct2Shelf(Product product) {
         products2Display.add(product);
         System.out.printf("🫳🏻 %s 진열 중...\n", product.getName());
-
-        // 저번에 말씀드린 2 라는 말장난 표현은 프로젝트내의 컨벤션의 영향을 많이 받기때문에
-        // 웬만하면 일반적인 표현을 쓰시는게 좋아요
     }
 
     public void showShelfProducts() {
