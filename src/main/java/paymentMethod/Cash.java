@@ -1,10 +1,9 @@
 package paymentMethod;
 
-public class Money extends PaymentMethod {
+public class Cash extends PaymentMethod {
 
-    public Money(int balance) {
+    public Cash(int balance) {
         super(balance);
-
         isCash = true;
     }
 }
