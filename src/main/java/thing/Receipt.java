@@ -49,7 +49,7 @@ public class Receipt implements Printable {
 //            System.out.printf("거스름돈 %24d\n", change);
 //        }
 
-        System.out.printf("결제방법 %22s\n", paymentDetail.getPaymentMethod().getName());
+        System.out.printf("결제방법 %23s\n", paymentDetail.getPaymentMethod().getName());
         System.out.printf("받은금액 %24d\n", totalPrice);
         int change = 0;
         if (paymentMethod.isCash()) {
