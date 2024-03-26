@@ -9,7 +9,7 @@ public class Cart {
     private static final Map<String, Product> map = new HashMap<>(); //"서울우유", Milk
     private int count = 0;
 
-    public void add(Product product, int quantity) {
+    public void contain(Product product, int quantity) {
 
         int max = 10;
         if (count + quantity > max) {
@@ -27,8 +27,7 @@ public class Cart {
         System.out.printf("✚ %s (%d원) %d개가 카트에 추가되었습니다. (현재까지 %d / %d 개)\n", product.getName(),
             product.getPrice(), quantity, count, max);
     }
-
-    public void view() {
+    public void show() {
         System.out.println("👜 카트 안의 모든 상품 목록입니다.");
         System.out.println();
         for (Map.Entry<String, Product> prod : map.entrySet()) {

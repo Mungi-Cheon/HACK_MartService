@@ -2,7 +2,6 @@ package service;
 
 import java.util.ArrayList;
 import paymentMethod.PaymentMethod;
-import service.obj.PaymentDetail;
 import service.obj.ProductRow;
 
 public class Receipt implements Printable {
@@ -36,11 +35,13 @@ public class Receipt implements Printable {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         System.out.printf("합   계 %24d\n", totalPrice);
         System.out.printf("결제방법 %23s\n", paymentMethod.getName());
-        System.out.printf("받은금액 %24d\n", totalPrice);
         int change = 0;
         if (paymentMethod.isCash()) {
+            System.out.printf("받은금액 %24d\n", totalPrice);
             change = paidAmount - totalPrice;
+            System.out.printf("거스름돈 %24d\n", change);
+        }else{
+            System.out.printf("승인번호 %24d\n", (int)(Math.random() * 899999) + 100000);
         }
-        System.out.printf("거스름돈 %24d\n", change);
     }
 }

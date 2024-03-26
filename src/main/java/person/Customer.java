@@ -6,7 +6,6 @@ import product.Product;
 import service.Bill;
 import service.Cart;
 import service.Receipt;
-import service.obj.PaymentDetail;
 import service.obj.ProductRow;
 
 
@@ -23,7 +22,7 @@ public class Customer implements Payable {
     }
 
     public void putInCart(Product product, Integer quantity) {
-        cart.add(product, quantity);
+        cart.contain(product, quantity);
     }
 
     @Override
@@ -36,5 +35,9 @@ public class Customer implements Payable {
 
     public Cart getCart() {
         return cart;
+    }
+
+    public void checkCart() {
+        cart.show();
     }
 }
