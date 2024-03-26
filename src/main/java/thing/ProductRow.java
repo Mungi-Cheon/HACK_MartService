@@ -1,5 +1,6 @@
 package thing;
 
+// record로 표현 가능할 듯
 public class ProductRow {
 
     private final String unitName;

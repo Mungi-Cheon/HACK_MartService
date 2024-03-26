@@ -9,7 +9,7 @@ public class Kiosk {
     }
 
     public Kiosk(String model) {
-        this.model = model;
+        this.model = model + "번 키오스크";
     }
 
     public String getModel() {

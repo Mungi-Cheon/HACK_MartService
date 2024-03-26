@@ -1,3 +1,4 @@
+import paymentMethod.Card;
 import paymentMethod.Money;
 import person.Cashier;
 import person.Customer;
@@ -20,8 +21,9 @@ public class Main {
         Person hoon = new Person("정훈");
         Person tae = new Person("경태");
         Money money = new Money(20000);
+        Card card = new Card();
         Cart cart = new Cart();
-        Customer customer = new Customer(songa, money, cart);
+        Customer customer = new Customer(songa, card, cart);
 
         MarketWorker marketWorker = new MarketWorker(hoon);
         marketWorker.addProduct2Shelf(seoulMilk);
@@ -34,8 +36,8 @@ public class Main {
         customer.putInCart(maeilMilk, 2);
         customer.putInCart(organicEgg, 1);
         Cashier cashier = new Cashier(tae);
-//        Cashier cashier = new Cashier(new Kiosk("Siri"));
-//        Cashier cashier = new Cashier(new Kiosk("빅스비"));
+//        Cashier cashier = new Cashier(new Kiosk("1"));
+//        Cashier cashier = new Cashier(new Kiosk("2"));
         cart.view();
         Bill bill = cashier.generateBill(cart);
         Receipt receipt = customer.pay(bill);

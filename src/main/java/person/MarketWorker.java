@@ -6,6 +6,8 @@ import java.util.*;
 public class MarketWorker {
 
     private List<Product> products2Display;
+    // To는 Map을 연상케하는 표현이라 여기선
+    // displayingProductList, displayingProducts 와 같은 느낌이 더 좋을듯
     private Person person;
 
     public MarketWorker(Person person) {
@@ -18,6 +20,9 @@ public class MarketWorker {
     public void addProduct2Shelf(Product product) {
         products2Display.add(product);
         System.out.printf("🫳🏻 %s 진열 중...\n", product.getName());
+
+        // 저번에 말씀드린 2 라는 말장난 표현은 프로젝트내의 컨벤션의 영향을 많이 받기때문에
+        // 웬만하면 일반적인 표현을 쓰시는게 좋아요
     }
 
     public void showShelfProducts() {

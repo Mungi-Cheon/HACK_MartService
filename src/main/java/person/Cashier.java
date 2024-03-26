@@ -27,6 +27,8 @@ public class Cashier implements Calculatable {
 
     @Override
     public Bill generateBill(Cart cart) {
+        // 여기도 불필요한 로직은 주석처리 보단 삭제
+
         totalPrice = 0;
         Map<String, Product> map = cart.getProducts();
         ArrayList<ProductRow> productRows = new ArrayList<>();
@@ -69,4 +71,11 @@ public class Cashier implements Calculatable {
         return new Bill(productRows);
     }
 
+
+    @Override
+    public void test() {
+        Calculatable.super.test();
+
+        System.out.println("aaaaa");
+    }
 }

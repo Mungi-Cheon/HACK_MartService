@@ -1,5 +1,7 @@
 package product;
 
+// 불필요한 클래스는 삭제
+
 //TODO
 public enum Category {
     Dairy("유제품", 1),

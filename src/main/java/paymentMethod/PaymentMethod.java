@@ -2,14 +2,26 @@ package paymentMethod;
 
 public abstract class PaymentMethod {
 
+    // 불필요한 로직은 주석처리보다 삭제
+    private String name;
     public int balance;
 
+    protected boolean isCash;
+
     public PaymentMethod() {
-//        System.out.println("💳 카드로 결제합니다.");
+        this.name = "카드";
     }
 
     public PaymentMethod(int balance) {
         this.balance = balance;
-//        System.out.println("💰 현금으로 결제합니다.");
+        this.name = "현금";
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isCash() {
+        return isCash;
     }
 }
