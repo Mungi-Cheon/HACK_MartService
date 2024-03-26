@@ -20,14 +20,13 @@ public class Cashier implements Calculatable {
     }
 
     public Cashier(Kiosk kiosk) {
-        this.kiosk = kiosk; //받아주기만 함.
+        this.kiosk = kiosk;
         System.out.println("🤖 " + kiosk.getModel() + "에서 계산을 도와드리겠습니다.");
         System.out.println();
     }
 
     @Override
     public Bill generateBill(Cart cart) {
-        // 여기도 불필요한 로직은 주석처리 보단 삭제
 
         totalPrice = 0;
         Map<String, Product> map = cart.getProducts();
@@ -36,7 +35,6 @@ public class Cashier implements Calculatable {
         System.out.printf("%-8s %5s %5s %5s\n", "상품명", "단가", "수량", "금액");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
 
-        //AFTER REFACTOR
         map.values().forEach(product -> {
             int unitTotal = product.getPrice() * product.getQuantity();
             System.out.printf("%-10s %5d %5d %6d\n", product.getName(), product.getPrice(),
@@ -47,22 +45,6 @@ public class Cashier implements Calculatable {
                 product.getQuantity(), unitTotal);
             productRows.add(productRow);
         });
-
-        //BEFORE REFACTOR
-//        for (Map.Entry<String, Product> product : map.entrySet()) {
-//            String unitName = product.getValue().getName();
-//            int unitPrice = product.getValue().getPrice();
-//            int unitQuantity = product.getValue().getQuantity();
-//            int unitTotal = unitPrice * unitQuantity;
-//
-//            totalPrice += unitTotal;
-//
-//            System.out.printf("%-10s %5d %5d %6d\n", unitName, unitPrice, unitQuantity,
-//                unitTotal);
-//
-//            ProductRow productRow = new ProductRow(unitName, unitPrice, unitQuantity, unitTotal);
-//            productRows.add(productRow);
-//        }
 
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         System.out.printf("%-25s %d\n", "합 계", totalPrice);

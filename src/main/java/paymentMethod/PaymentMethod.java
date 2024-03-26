@@ -2,11 +2,9 @@ package paymentMethod;
 
 public abstract class PaymentMethod {
 
-    // 불필요한 로직은 주석처리보다 삭제
-    private String name;
     public int balance;
-
     protected boolean isCash;
+    private String name;
 
     public PaymentMethod() {
         this.name = "카드";

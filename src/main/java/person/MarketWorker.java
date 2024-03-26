@@ -30,12 +30,12 @@ public class MarketWorker {
         System.out.println("📦 진열된 상품 목록입니다.");
         System.out.println();
         products2Display.stream()
-                .map(Product::getName)
-                .forEach(name -> System.out.printf("• %s\n", name));
+            .map(Product::getName)
+            .forEach(name -> System.out.printf("• %s\n", name));
         System.out.println();
     }
 
-    public void shelfSummary() {
+    public void shelfSummary() { //동사로 변경
         int totalTypes = products2Display.size();
         System.out.println("✅ 총 " + totalTypes + " 종류의 상품이 진열되었습니다.");
         System.out.println();
