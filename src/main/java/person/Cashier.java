@@ -15,13 +15,13 @@ public class Cashier implements Calculatable {
     private Calculatable calculatable;
 
     public Cashier(Person person) {
-        System.out.printf("🙍‍ 안녕하세요. 계산원 %s입니다.\n", person.getName());
+        System.out.printf("\n🙍‍ 안녕하세요. 계산원 %s입니다.", person.getName());
         System.out.println();
     }
 
     public Cashier(Kiosk kiosk) {
         this.kiosk = kiosk;
-        System.out.println("🤖 " + kiosk.getModel() + "에서 계산을 도와드리겠습니다.");
+        System.out.println("\n🤖 " + kiosk.getModel() + "에서 계산을 도와드리겠습니다.");
         System.out.println();
     }
 
