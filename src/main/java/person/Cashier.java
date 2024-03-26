@@ -52,12 +52,4 @@ public class Cashier implements Calculatable {
 
         return new Bill(productRows);
     }
-
-
-    @Override
-    public void test() {
-        Calculatable.super.test();
-
-        System.out.println("aaaaa");
-    }
 }
