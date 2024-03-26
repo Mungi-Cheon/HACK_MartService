@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import paymentMethod.Card;
 import paymentMethod.Cash;
 import person.Cashier;
 import person.Customer;
