@@ -1,9 +1,9 @@
-package thing;
+package service;
 
 import java.util.ArrayList;
-import paymentMethod.Card;
-import paymentMethod.Cash;
 import paymentMethod.PaymentMethod;
+import service.obj.PaymentDetail;
+import service.obj.ProductRow;
 
 public class Receipt implements Printable {
 
@@ -36,19 +36,6 @@ public class Receipt implements Printable {
         }
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         System.out.printf("합   계 %24d\n", totalPrice);
-
-//        if (paymentMethod instanceof Card) {
-//            System.out.printf("결제방법 %22s\n", "💳카드");
-//            System.out.printf("결제방법 %22s\n", paymentDetail.getPaymentMethod().getName());
-//            System.out.printf("받은금액 %22d\n", totalPrice);
-//            System.out.printf("거스름돈 %22d\n", 0);
-//        } else if (paymentMethod instanceof Money) {
-//            System.out.printf("결제방법 %23s\n", paymentDetail.getPaymentMethod().getName());
-//            System.out.printf("받은금액 %24d\n", paidAmount);
-//            int change = paidAmount - totalPrice;
-//            System.out.printf("거스름돈 %24d\n", change);
-//        }
-
         System.out.printf("결제방법 %23s\n", paymentDetail.getPaymentMethod().getName());
         System.out.printf("받은금액 %24d\n", totalPrice);
         int change = 0;

@@ -4,14 +4,15 @@ import paymentMethod.Card;
 import paymentMethod.Cash;
 import person.Cashier;
 import person.Customer;
+import person.Kiosk;
 import person.MarketWorker;
 import person.Person;
 import product.Egg;
 import product.Milk;
 import product.Product;
-import thing.Bill;
-import thing.Cart;
-import thing.Receipt;
+import service.Bill;
+import service.Cart;
+import service.Receipt;
 
 public class Main {
 
@@ -24,17 +25,14 @@ public class Main {
         Person hoon = new Person("정훈");
         Person tae = new Person("경태");
         Cash cash = new Cash(20000);
-        Card card = new Card();
-        Cart cart = new Cart();
-        Customer customer = new Customer(songa, card, cart);
+        Customer customer = new Customer(songa, cash, new Cart());
+//        Customer customer = new Customer(songa, new Card(), new Cart());
         ArrayList<Product> products = new ArrayList<>(
             Arrays.asList(seoulMilk, maeilMilk, organicEgg));
         MarketWorker marketWorker = new MarketWorker(hoon);
 
         //상품 진열하기
-        for (Product product : products) {
-            marketWorker.addProduct2Shelf(product);
-        }
+        marketWorker.addProduct2Shelf(products);
         marketWorker.showShelfProducts();
         marketWorker.shelfSummary();
 
@@ -42,13 +40,12 @@ public class Main {
         customer.putInCart(seoulMilk, 1);
         customer.putInCart(maeilMilk, 2);
         customer.putInCart(organicEgg, 1);
-        Cashier cashier = new Cashier(tae);
-//        Cashier cashier = new Cashier(new Kiosk("1"));
-//        Cashier cashier = new Cashier(new Kiosk("2"));
-        cart.view();
+//        Cashier cashier = new Cashier(tae);
+        Cashier cashier = new Cashier(new Kiosk(1));
+        customer.getCart().view();
 
         //계산하기
-        Bill bill = cashier.generateBill(cart);
+        Bill bill = cashier.generateBill(customer.getCart());
         Receipt receipt = customer.pay(bill);
         receipt.printReceipt();
     }

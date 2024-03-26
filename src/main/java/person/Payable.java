@@ -1,7 +1,7 @@
 package person;
 
-import thing.Bill;
-import thing.Receipt;
+import service.Bill;
+import service.Receipt;
 
 public interface Payable {
 

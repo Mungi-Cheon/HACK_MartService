@@ -3,9 +3,9 @@ package person;
 import java.util.ArrayList;
 import java.util.Map;
 import product.Product;
-import thing.Bill;
-import thing.Cart;
-import thing.ProductRow;
+import service.Bill;
+import service.Cart;
+import service.obj.ProductRow;
 
 public class Cashier implements Calculatable {
 
@@ -53,13 +53,5 @@ public class Cashier implements Calculatable {
         System.out.println();
 
         return new Bill(productRows);
-    }
-
-
-    @Override
-    public void test() {
-        Calculatable.super.test();
-
-        System.out.println("aaaaa");
     }
 }

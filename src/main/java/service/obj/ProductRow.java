@@ -1,4 +1,4 @@
-package thing;
+package service.obj;
 
 public class ProductRow {
 

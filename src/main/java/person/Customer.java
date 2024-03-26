@@ -3,11 +3,12 @@ package person;
 import java.util.ArrayList;
 import paymentMethod.PaymentMethod;
 import product.Product;
-import thing.Bill;
-import thing.Cart;
-import thing.PaymentDetail;
-import thing.ProductRow;
-import thing.Receipt;
+import service.Bill;
+import service.Cart;
+import service.Receipt;
+import service.obj.PaymentDetail;
+import service.obj.ProductRow;
+
 
 public class Customer implements Payable {
 
@@ -32,5 +33,9 @@ public class Customer implements Payable {
         System.out.printf("%s 결제를 진행합니다.\n", paymentDetail.getPaymentMethod().getName());
         System.out.println();
         return new Receipt(productRows, paymentDetail);
+    }
+
+    public Cart getCart() {
+        return cart;
     }
 }
