@@ -2,8 +2,8 @@ package paymentMethod;
 
 public abstract class PaymentMethod {
 
-    public int balance;
     protected boolean isCash;
+    private int balance;
     private String name;
 
     public PaymentMethod() {
@@ -15,11 +15,17 @@ public abstract class PaymentMethod {
         this.name = "💰 현금";
     }
 
+    public boolean isCash() {
+        return isCash;
+    }
+
     public String getName() {
         return name;
     }
 
-    public boolean isCash() {
-        return isCash;
+    public int getBalance() {
+        return balance;
     }
+
+
 }

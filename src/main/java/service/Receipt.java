@@ -8,17 +8,16 @@ import service.obj.ProductRow;
 public class Receipt implements Printable {
 
     private ArrayList<ProductRow> productRows;
-    private PaymentDetail paymentDetail;
+    private PaymentMethod paymentMethod;
 
-    public Receipt(ArrayList<ProductRow> productRows, PaymentDetail paymentDetail) {
+    public Receipt(ArrayList<ProductRow> productRows, PaymentMethod paymentMethod) {
         this.productRows = productRows;
-        this.paymentDetail = paymentDetail;
+        this.paymentMethod = paymentMethod;
     }
 
     @Override
     public void printReceipt() {
-        PaymentMethod paymentMethod = paymentDetail.getPaymentMethod();
-        int paidAmount = paymentDetail.getPaymentMethod().balance;
+        int paidAmount = paymentMethod.getBalance();
         int totalPrice = 0;
 
         System.out.println("🖨 영수증을 출력합니다.");
@@ -36,7 +35,7 @@ public class Receipt implements Printable {
         }
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         System.out.printf("합   계 %24d\n", totalPrice);
-        System.out.printf("결제방법 %23s\n", paymentDetail.getPaymentMethod().getName());
+        System.out.printf("결제방법 %23s\n", paymentMethod.getName());
         System.out.printf("받은금액 %24d\n", totalPrice);
         int change = 0;
         if (paymentMethod.isCash()) {

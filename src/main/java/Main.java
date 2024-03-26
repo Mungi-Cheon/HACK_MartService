@@ -25,8 +25,9 @@ public class Main {
         Person hoon = new Person("정훈");
         Person tae = new Person("경태");
         Cash cash = new Cash(20000);
-        Customer customer = new Customer(songa, cash, new Cart());
-//        Customer customer = new Customer(songa, new Card(), new Cart());
+        Card card = new Card();
+//        Customer customer = new Customer(songa, cash, new Cart());
+        Customer customer = new Customer(songa, card, new Cart());
         ArrayList<Product> products = new ArrayList<>(
             Arrays.asList(seoulMilk, maeilMilk, organicEgg));
         MarketWorker marketWorker = new MarketWorker(hoon);
