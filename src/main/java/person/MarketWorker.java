@@ -24,9 +24,9 @@ public class MarketWorker {
         System.out.println();
         System.out.println("📦 진열된 상품 목록입니다.");
         System.out.println();
-        for (Product product : products2Display) {
-            System.out.printf("• %s\n", product.getName());
-        }
+        products2Display.stream()
+                .map(Product::getName)
+                .forEach(name -> System.out.printf("• %s\n", name));
         System.out.println();
     }
 
