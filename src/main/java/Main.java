@@ -4,6 +4,7 @@ import paymentMethod.Card;
 import paymentMethod.Cash;
 import person.Cashier;
 import person.Customer;
+import person.Kiosk;
 import person.MarketWorker;
 import person.Person;
 import product.Egg;
@@ -42,9 +43,9 @@ public class Main {
         customer.putInCart(seoulMilk, 1);
         customer.putInCart(maeilMilk, 2);
         customer.putInCart(organicEgg, 1);
-        Cashier cashier = new Cashier(tae);
-//        Cashier cashier = new Cashier(new Kiosk("1"));
-//        Cashier cashier = new Cashier(new Kiosk("2"));
+//        Cashier cashier = new Cashier(tae);
+        Cashier cashier = new Cashier(new Kiosk());
+//        Cashier cashier = new Cashier(new Kiosk(1));
         cart.view();
 
         //계산하기
