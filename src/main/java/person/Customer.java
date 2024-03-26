@@ -29,8 +29,7 @@ public class Customer implements Payable {
     public Receipt pay(Bill bill) {
         ArrayList<ProductRow> productRows = bill.getProductRows();
         PaymentDetail paymentDetail = new PaymentDetail(paymentMethod);
-//
-//        System.out.println(paymentDetail.getPaymentMethod().getName() + "로 결제합니다.");
+        System.out.printf("☑️ %s 결제를 진행합니다.\n", paymentDetail.getPaymentMethod().getName());
         return new Receipt(productRows, paymentDetail);
     }
 }
