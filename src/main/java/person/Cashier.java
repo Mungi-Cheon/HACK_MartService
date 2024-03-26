@@ -32,6 +32,8 @@ public class Cashier implements Calculatable {
         Map<String, Product> map = cart.getProducts();
         ArrayList<ProductRow> productRows = new ArrayList<>();
 
+        System.out.println("✍️ 결제하실 내역입니다.");
+        System.out.println();
         System.out.printf("%-8s %5s %5s %5s\n", "상품명", "단가", "수량", "금액");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
 
