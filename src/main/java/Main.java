@@ -1,7 +1,6 @@
 import paymentMethod.Money;
 import person.Cashier;
 import person.Customer;
-import person.Kiosk;
 import person.MarketWorker;
 import person.Person;
 import product.Egg;
@@ -25,11 +24,11 @@ public class Main {
         Customer customer = new Customer(songa, money, cart);
 
         MarketWorker marketWorker = new MarketWorker(hoon);
-        marketWorker.addProductToDisplay(seoulMilk);
-        marketWorker.addProductToDisplay(maeilMilk);
-        marketWorker.addProductToDisplay(organicEgg);
-        marketWorker.showDisplayProductList();
-        marketWorker.displaySummary();
+        marketWorker.addProduct2Shelf(seoulMilk);
+        marketWorker.addProduct2Shelf(maeilMilk);
+        marketWorker.addProduct2Shelf(organicEgg);
+        marketWorker.showShelfProducts();
+        marketWorker.shelfSummary();
 
         customer.putInCart(seoulMilk, 1);
         customer.putInCart(maeilMilk, 2);
