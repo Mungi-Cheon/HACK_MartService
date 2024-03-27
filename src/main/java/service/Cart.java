@@ -24,9 +24,10 @@ public class Cart {
         count += quantity;
         map.put(name, current);
 
-        System.out.printf("✚ %s (%d원) %d개가 카트에 추가되었습니다. (현재까지 %d / %d 개)\n", product.getName(),
+        System.out.printf("✚ %s (%d원) %d개가 카트에 추가되었습니다.\n(현재까지 %d / %d 개)\n", product.getName(),
             product.getPrice(), quantity, count, max);
     }
+
     public void show() {
         System.out.println("👜 카트 안의 모든 상품 목록입니다.");
         System.out.println();
