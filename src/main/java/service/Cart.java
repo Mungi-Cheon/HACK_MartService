@@ -13,7 +13,7 @@ public class Cart {
 
         int max = 10;
         if (count + quantity > max) {
-            System.out.printf("🚫 상품은 최대 %d개까지 넣을 수 있습니다.\n", max);
+            System.out.printf("\n🚫 상품은 최대 %d개까지 넣을 수 있습니다.\n", max);
             return;
         }
 
@@ -29,8 +29,7 @@ public class Cart {
     }
 
     public void show() {
-        System.out.println("👜 카트 안의 모든 상품 목록입니다.");
-        System.out.println();
+        System.out.println("👜 카트 안의 모든 상품 목록입니다.\n");
         for (Map.Entry<String, Product> prod : map.entrySet()) {
             System.out.printf("• %s: %d개\n", prod.getKey(), prod.getValue().getQuantity());
         }

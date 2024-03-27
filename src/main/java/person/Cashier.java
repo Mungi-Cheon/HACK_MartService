@@ -15,14 +15,13 @@ public class Cashier implements Calculatable {
     private Calculatable calculatable;
 
     public Cashier(Person person) {
-        System.out.printf("\n🙍‍ 안녕하세요. 계산원 %s입니다.", person.getName());
-        System.out.println();
+        System.out.printf("\n🙍‍ 안녕하세요. 계산원 %s입니다.\n", person.getName());
+
     }
 
     public Cashier(Kiosk kiosk) {
         this.kiosk = kiosk;
-        System.out.println("\n🤖 " + kiosk.getModel() + "에서 계산을 도와드리겠습니다.");
-        System.out.println();
+        System.out.println("\n🤖 " + kiosk.getModel() + "에서 계산을 도와드리겠습니다.\n");
     }
 
     @Override
@@ -32,8 +31,7 @@ public class Cashier implements Calculatable {
         Map<String, Product> map = cart.getProducts();
         ArrayList<ProductRow> productRows = new ArrayList<>();
 
-        System.out.println("✍️ 결제하실 내역입니다.");
-        System.out.println();
+        System.out.println("️🗒️ 결제하실 내역입니다.\n");
         System.out.printf("%-8s %5s %5s %5s\n", "상품명", "단가", "수량", "금액");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
 
@@ -50,7 +48,6 @@ public class Cashier implements Calculatable {
 
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         System.out.printf("%-25s %d\n", "합 계", totalPrice);
-        System.out.println();
 
         return new Bill(productRows);
     }

@@ -11,8 +11,7 @@ public class MarketWorker {
     public MarketWorker(Person person) {
         this.person = person;
         displayedProducts = new ArrayList<>();
-        System.out.printf("👦🏻 안녕하세요. 마트 직원 %s입니다.\n", person.getName());
-        System.out.println();
+        System.out.printf("\n👦🏻 안녕하세요. 마트 직원 %s입니다.\n\n", person.getName());
     }
 
     public void display(List<Product> products) {
@@ -26,7 +25,6 @@ public class MarketWorker {
 
     public void showSummary() {
         int totalTypes = displayedProducts.size();
-        System.out.println("\n✅ 총 " + totalTypes + " 종의 상품이 진열되었습니다.");
-        System.out.println();
+        System.out.println("\n✅ 총 " + totalTypes + " 종의 상품이 진열되었습니다.\n");
     }
 }

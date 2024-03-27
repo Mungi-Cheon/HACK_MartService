@@ -28,8 +28,7 @@ public class Customer implements Payable {
     @Override
     public Receipt pay(Bill bill) {
         ArrayList<ProductRow> productRows = bill.getProductRows();
-        System.out.printf("%s 받았습니다, %s님.\n", paymentMethod.getName(), person.getName());
-        System.out.println();
+        System.out.printf("\n%s 받았습니다, %s님.\n", paymentMethod.getName(), person.getName());
         return new Receipt(productRows, paymentMethod);
     }
 

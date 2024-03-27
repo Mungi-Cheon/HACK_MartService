@@ -26,9 +26,8 @@ public class Receipt implements Printable {
                 throw new IllegalArgumentException("금액이 " + remainingAmount + "만큼 부족합니다.");
             }
 
-            System.out.println("🖨 영수증을 출력합니다.");
-            System.out.println();
-            System.out.printf("%-8s %5s %5s %5s\n", "상품명", "단가", "수량", "금액");
+            System.out.println("\n🖨 영수증을 출력합니다.");
+            System.out.printf("\n%-8s %5s %5s %5s\n", "상품명", "단가", "수량", "금액");
             System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
 
             for (ProductRow productRow : productRows) {
