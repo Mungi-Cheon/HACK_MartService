@@ -15,7 +15,7 @@ public class MarketWorker {
         System.out.println();
     }
 
-    public void display(ArrayList<Product> products) {
+    public void display(List<Product> products) {
         products.forEach(this::display);
     }
 
