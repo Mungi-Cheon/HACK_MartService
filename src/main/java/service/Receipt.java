@@ -18,12 +18,12 @@ public class Receipt implements Printable {
     @Override
     public void printReceipt() {
         int paidAmount = paymentMethod.getBalance();
-        int totalPrice = productRows.stream().mapToInt(ProductRow::getUnitPrice).sum();
+        int totalPrice = productRows.stream().mapToInt(ProductRow::getUnitTotal).sum();
 
         try {
             if (paidAmount < totalPrice && paymentMethod.isCash()) {
-                int remainingAmount = totalPrice - paidAmount;
-                throw new IllegalArgumentException("금액이 " + remainingAmount + "만큼 부족합니다.");
+                int remainingBalance = totalPrice - paidAmount;
+                throw new IllegalArgumentException("받은 금액이 " + remainingBalance + "원 부족합니다.");
             }
 
             System.out.println("\n🖨 영수증을 출력합니다.");
