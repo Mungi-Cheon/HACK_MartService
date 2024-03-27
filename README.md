@@ -121,14 +121,12 @@
 - 결제 후에는 영수증이 출력됩니다.
   <br><br>
     - 현금 결제시, 받은금액과 거스름돈을 보여줍니다.
-
-  ![img_7.png](img_7.png)
-  <br><br>
+      ![img_9.png](img_9.png)
+      <br><br>
 
     - 카드 결제시, 승인번호만 보여줍니다.
-
-  ![img_8.png](img_8.png)
-  <br><br>
+      ![img_8.png](img_8.png)
+      <br><br>
 
 ## 6. KPT
 

@@ -30,9 +30,10 @@ public class Main {
         marketWorker.showSummary();
 
         Person songa = new Person("송아");
-//        Cash cash = new Cash(20000);
-//        Customer customer = new Customer(songa, cash, new Cart());
-        Customer customer = new Customer(songa, new Card(), new Cart());
+        Cash cash = new Cash(20000);
+        Card card = new Card();
+        Customer customer = new Customer(songa, cash, new Cart());
+//        Customer customer = new Customer(songa, card, new Cart());
 
         customer.putInCart(seoulMilk, 1);
         customer.putInCart(maeilMilk, 2);
