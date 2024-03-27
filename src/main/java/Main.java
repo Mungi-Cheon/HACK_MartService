@@ -35,8 +35,8 @@ public class Main {
         Customer customer = new Customer(songa, cash, new Cart());
 //        Customer customer = new Customer(songa, card, new Cart());
 
-        customer.putInCart(seoulMilk, 1);
-        customer.putInCart(maeilMilk, 2);
+        customer.putInCart(seoulMilk, 5);
+        customer.putInCart(maeilMilk, 5);
         customer.putInCart(organicEgg, 1);
 
 //        Person tae = new Person("경태");

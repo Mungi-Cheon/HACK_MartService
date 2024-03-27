@@ -98,6 +98,11 @@
 ![img_1.png](img_1.png)
 <br><br>
 
+- 카트가 담을 수 있는 최대 수량을 초과해서 담을 수 없습니다.
+
+![img_10.png](img_10.png)
+<br><br>
+
 - 마트 근무자도 계산원이 될 수 있습니다.
 
 ![img_2.png](img_2.png)
@@ -119,14 +124,16 @@
 <br><br>
 
 - 결제 후에는 영수증이 출력됩니다.
-  <br><br>
+
     - 현금 결제시, 받은금액과 거스름돈을 보여줍니다.
-      ![img_9.png](img_9.png)
-      <br><br>
+
+  ![img_9.png](img_9.png)
+  <br><br>
 
     - 카드 결제시, 승인번호만 보여줍니다.
-      ![img_8.png](img_8.png)
-      <br><br>
+
+  ![img_8.png](img_8.png)
+  <br><br>
 
 ## 6. KPT
 
