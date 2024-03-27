@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import paymentMethod.Card;
 import paymentMethod.Cash;
 import person.Cashier;
@@ -24,8 +25,7 @@ public class Main {
         Product maeilMilk = new Milk("매일우유", 1100);
         Product organicEgg = new Egg("유기농 계란", 8000);
 
-        ArrayList<Product> products = new ArrayList<>(
-            Arrays.asList(seoulMilk, maeilMilk, organicEgg));
+        List<Product> products = Arrays.asList(seoulMilk, maeilMilk, organicEgg);
         marketWorker.display(products);
         marketWorker.showSummary();
 
