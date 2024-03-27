@@ -18,11 +18,7 @@ public class Receipt implements Printable {
 	@Override
 	public void printReceipt() {
 		int paidAmount = paymentMethod.getBalance();
-		int totalPrice = 0;
-
-		for (ProductRow row : productRows) {
-			totalPrice += row.getUnitTotal();
-		}
+		int totalPrice = productRows.stream().mapToInt(ProductRow::getUnitPrice).sum();
 
 		try {
 			if (paidAmount < totalPrice && paymentMethod.isCash()) {
@@ -36,7 +32,6 @@ public class Receipt implements Printable {
 			System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
 
 			for (ProductRow productRow : productRows) {
-				totalPrice += productRow.getUnitTotal();
 				System.out.printf("%-10s %5d %5d %6d\n",
 					productRow.getUnitName(),
 					productRow.getUnitPrice(),
@@ -56,7 +51,7 @@ public class Receipt implements Printable {
 			}
 
 		} catch (IllegalArgumentException e) {
-			e.getMessage();
+			System.err.println(e.getMessage());
 		}
 	}
 }
