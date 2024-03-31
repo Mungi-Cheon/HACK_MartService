@@ -1,18 +1,19 @@
 package service;
 
-import java.util.ArrayList;
-import service.obj.ProductRow;
-
 public class Bill {
 
-    private ArrayList<ProductRow> productRows;
+    private Products products;
 
-    public Bill(ArrayList<ProductRow> productRows) {
-        this.productRows = productRows;
+    public Bill(Products products) {
+        this.products = products;
     }
 
-    public ArrayList<ProductRow> getProductRows() {
-        return productRows;
+    public Products getProducts() {
+        return this.products;
+    }
+
+    public int getTotalPrice() {
+        return products.getTotalPrice();
     }
 }
 

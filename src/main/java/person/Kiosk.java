@@ -1,20 +1,23 @@
 package person;
 
-public class Kiosk {
+import java.util.Map;
+import java.util.Random;
+
+public class Kiosk implements Calculable {
 
     private String model;
-    private int number;
+    private final int number;
+
 
     public Kiosk() {
         this.model = "키오스크";
-    }
-
-    public Kiosk(int number) {
+        this.number = (int) (Math.random() * 10);
         this.model = number + "번 키오스크";
     }
 
-    public String getModel() {
-        return model;
+    @Override
+    public void introduce() {
+        System.out.println("\n🤖 " + this.model + "에서 계산을 도와드리겠습니다.\n");
     }
 }
 

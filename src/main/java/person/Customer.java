@@ -1,12 +1,10 @@
 package person;
 
-import java.util.ArrayList;
 import paymentMethod.PaymentMethod;
 import product.Product;
 import service.Bill;
-import service.Cart;
 import service.Receipt;
-import service.obj.ProductRow;
+import service.cart.Cart;
 
 
 public class Customer implements Payable {
@@ -27,9 +25,9 @@ public class Customer implements Payable {
 
     @Override
     public Receipt pay(Bill bill) {
-        ArrayList<ProductRow> productRows = bill.getProductRows();
         System.out.printf("\n%s 받았습니다, %s님.\n", paymentMethod.getName(), person.getName());
-        return new Receipt(productRows, paymentMethod);
+        paymentMethod.pay(bill);
+        return new Receipt(bill.getProducts(), paymentMethod);
     }
 
     public Cart getCart() {
