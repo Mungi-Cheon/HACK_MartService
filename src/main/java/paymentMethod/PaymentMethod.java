@@ -1,31 +1,12 @@
 package paymentMethod;
 
-public abstract class PaymentMethod {
+import service.Bill;
 
-    protected boolean isCash;
-    private int balance;
-    private String name;
+public interface PaymentMethod {
 
-    public PaymentMethod() {
-        this.name = "💳 카드";
-    }
+    String getName();
 
-    public PaymentMethod(int balance) {
-        this.balance = balance;
-        this.name = "💰 현금";
-    }
+    void pay(Bill bill);
 
-    public boolean isCash() {
-        return isCash;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getBalance() {
-        return balance;
-    }
-
-
+    void validateEnoughMoneyForPurchase(int totalPrice);
 }
